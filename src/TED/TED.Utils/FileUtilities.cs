@@ -22,7 +22,7 @@ namespace TED.Utils
         public static async Task<string> DownloadAndCacheFileAsync(string url)
         {
             var tedDirectory = Path.Combine(Path.GetTempPath(), "TED");
-            var recentPath = Path.Combine(tedDirectory, "ctic.png");
+            var recentPath = Path.Combine(tedDirectory, "recent.png");
 
             try
             {
@@ -48,7 +48,7 @@ namespace TED.Utils
                         return string.Empty;
                     }
 
-                    var fileName = "ctic1.png";
+                    var fileName = "ted.png";
 
                     if (response.Headers.ETag != null)
                     {
